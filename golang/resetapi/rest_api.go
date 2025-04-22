@@ -238,10 +238,10 @@ func (c *client) CheckStatus(ctx context.Context, captchaKey string) (bool, erro
 		SetTimeout(c.timeout).
 		R().
 		SetContext(ctx).
-		SetQueryParam("captchaKey", captchaKey).
 		SetHeader("Content-Type", request.CONTENT_JSON_TYPE).
 		SetHeader("X-API-Key", c.config.APIKey).
-		Get(GetStatusInfoUrlPath)
+		SetQueryParam("captchaKey", captchaKey).
+		Get(CheckStatusUrlPath)
 
 	if err != nil {
 		return false, err
@@ -267,7 +267,7 @@ func (c *client) CheckStatus(ctx context.Context, captchaKey string) (bool, erro
 		return false, fmt.Errorf("code: %d, message: %v, data: %v", resData.Code, resData.Message, resData.Data)
 	}
 
-	return true, nil
+	return resData.Data == "ok", nil
 }
 
 // GetStatusInfo ..
