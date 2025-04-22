@@ -1,14 +1,14 @@
 package resetapi
 
 const (
-	GetDataUrlPath       = "/v1/get-data"
-	CheckDataUrlPath     = "/v1/check-status"
-	GetStatusInfoUrlPath = "/v1/get-status-info"
-	DelStatusInfoUrlPath = "/v1/del-status-info"
+	GetDataUrlPath       = "/api/v1/get-data"
+	CheckDataUrlPath     = "/api/v1/check-status"
+	GetStatusInfoUrlPath = "/api/v1/get-status-info"
+	DelStatusInfoUrlPath = "/api/v1/del-status-info"
 
-	UploadResourceUrlPath  = "/v1/manage/upload-resource"
-	DeleteResourceUrlPath  = "/v1/manage/delete-resource"
-	GetResourceListUrlPath = "/v1/manage/get-resource-list"
-	GetConfigUrlPath       = "/v1/manage/get-config"
-	UpdateHotConfigUrlPath = "/v1/manage/update-hot-config"
+	UploadResourceUrlPath  = "/api/v1/manage/upload-resource"
+	DeleteResourceUrlPath  = "/api/v1/manage/delete-resource"
+	GetResourceListUrlPath = "/api/v1/manage/get-resource-list"
+	GetConfigUrlPath       = "/api/v1/manage/get-config"
+	UpdateHotConfigUrlPath = "/api/v1/manage/update-hot-config"
 )
