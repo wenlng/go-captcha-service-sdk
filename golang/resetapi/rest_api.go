@@ -224,7 +224,7 @@ func (c *client) CheckData(ctx context.Context, id, captchaKey, value string) (b
 		return true, nil
 	}
 	
-	return true, nil
+	return false, nil
 }
 
 // CheckStatus ..
