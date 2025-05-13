@@ -2,7 +2,7 @@ package resetapi
 
 const (
 	GetDataUrlPath     = "/api/v1/public/get-data"
-	CheckDataUrlPath   = "/api/v1/public/check-status"
+	CheckDataUrlPath   = "/api/v1/public/check-data"
 	CheckStatusUrlPath = "/api/v1/public/check-status"
 
 	GetStatusInfoUrlPath   = "/api/v1/manage/get-status-info"
