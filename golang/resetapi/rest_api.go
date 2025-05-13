@@ -220,6 +220,10 @@ func (c *client) CheckData(ctx context.Context, id, captchaKey, value string) (b
 		return false, fmt.Errorf("code: %d, message: %v, data: %v", resData.Code, resData.Message, resData.Data)
 	}
 
+  	if resData.Data == "ok" {
+		return true, nil
+	}
+	
 	return true, nil
 }
 
