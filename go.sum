@@ -415,6 +415,8 @@ github.com/tjfoc/gmsm v1.4.1/go.mod h1:j4INPkHWMrhJb38G+J6W4Tw0AbuN8Thu3PbdVYhVc
 github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926/go.mod h1:9ESjWnEqriFuLhtthL60Sar/7RFoluCcXsuvEwTV5KM=
 github.com/wenlng/go-service-link v0.0.2 h1:5nB/W1UD5EkH+JEtVA71tzBZX/FXZRyXHg8Ovo4Oggs=
 github.com/wenlng/go-service-link v0.0.2/go.mod h1:1d4570TMBbMPv/w0pwgjT7Ev6Ajxv2/u0UVL1mIh6Y0=
+github.com/wenlng/go-service-link v0.0.3 h1:PXhuQTjspfoCA1kaPH+KrIzwjeXSeSQ12xtLBU+uNfI=
+github.com/wenlng/go-service-link v0.0.3/go.mod h1:1d4570TMBbMPv/w0pwgjT7Ev6Ajxv2/u0UVL1mIh6Y0=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.30/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

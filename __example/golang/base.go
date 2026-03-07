@@ -13,7 +13,8 @@ var grpcapiCli grpcapi.Client
 var sdlbInts *sdlb.SDLB
 
 const serviceName = "go-captcha-service"
-const Addrs = "localhost:8848"
+const HttpAddrs = "localhost:8181"
+const GrpcAddrs = "localhost:50058"
 const Username = "nacos"
 const Password = "nacos"
 const ApiKey = "my-secret-key-123"
@@ -22,7 +23,7 @@ const ApiKey = "my-secret-key-123"
 func setupHttpClient() error {
 	sdlbInstance, err := sdlb.NewServiceDiscoveryLB(sdlb.ClientConfig{
 		ServiceDiscoveryType: sdlb.ServiceDiscoveryTypeNacos,
-		Addrs:                Addrs,
+		Addrs:                HttpAddrs,
 		LoadBalancerType:     sdlb.LoadBalancerTypeRandom,
 		ServiceName:          serviceName,
 		Username:             Username,
@@ -41,11 +42,22 @@ func setupHttpClient() error {
 	return err
 }
 
+// setupHttpClient2 .
+func setupHttpClient2() error {
+	var err error
+	restapiCli, err = resetapi.NewHTTPClient(resetapi.ClientConfig{
+		BaseUrl: HttpAddrs,
+		APIKey:  ApiKey,
+	}, nil)
+
+	return err
+}
+
 // setupGrpcClient .
 func setupGrpcClient() error {
 	sdlbInstance, err := sdlb.NewServiceDiscoveryLB(sdlb.ClientConfig{
 		ServiceDiscoveryType: sdlb.ServiceDiscoveryTypeNacos,
-		Addrs:                Addrs,
+		Addrs:                GrpcAddrs,
 		LoadBalancerType:     sdlb.LoadBalancerTypeRandom,
 		ServiceName:          serviceName,
 		Username:             Username,
@@ -59,6 +71,16 @@ func setupGrpcClient() error {
 	grpcapiCli, err = grpcapi.NewGRPCClient(grpcapi.ClientConfig{
 		APIKey: ApiKey,
 	}, sdlbInstance)
+	return err
+}
+
+// setupGrpcClient2 .
+func setupGrpcClient2() error {
+	var err error
+	grpcapiCli, err = grpcapi.NewGRPCClient(grpcapi.ClientConfig{
+		BaseAddress: GrpcAddrs,
+		APIKey:      ApiKey,
+	}, nil)
 	return err
 }
 

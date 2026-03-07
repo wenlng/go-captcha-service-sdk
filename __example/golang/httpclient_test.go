@@ -7,7 +7,8 @@ import (
 )
 
 func TestHttp(t *testing.T) {
-	err := setupHttpClient()
+	//err := setupHttpClient()  // load balancing
+	err := setupHttpClient2()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to new sdlb: %v\n", err)
 		return
